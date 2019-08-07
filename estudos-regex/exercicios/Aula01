@@ -1,0 +1,53 @@
+EXPRESSÕES REGULARES
+
+
+**********/AULA1/*************
+
+
+*target* - João Fulano,123.456.789-00,21 de Maio de 1993,(21) 3079-9987,Rua do Ouvidor,50,20040-030,Rio de Janeiro
+
+//busca de digitos
+
+expressao: \d  
+Matches: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 0 | 2 | 1 | 1 | 9 | 9 | 3 | 2 | 1 | 3 | 0 | 7 | 9 | 9 | 9 | 8 | 7 | 5 | 0 | 2 | 0 | 0 | 4 | 0 | 0 | 3 | 0
+
+// busca digitos por sequencia
+
+expressao: \d\d\d
+Matches: 123 | 456 | 789 | 199 | 307 | 998 | 200 | 030
+
+//escapando um meta caracter como o .
+
+expressao:\d\d\d\.
+Matches: 123. | 456.
+
+//busca por padrao cpf
+
+expressao: \d\d\d\.\d\d\d\.\d\d\d-\d\d
+Matches: 123.456.789-00
+
+// simplificando a expressão acima passando a quantidade de digitos ao invez de ficar repetindo \d para cada digito
+
+expressao: \d{3}\.\d{3}\.\d{3}-\d{2}
+Matches: 123.456.789-00
+
+//Busca padrao CEP
+
+expressao: \d{5}-\d{3}
+Matches: 20040-030
+
+
+
+*target* - 15.123.321/8883-22, 128.126.12.244
+
+//busca por padrao CNPJ
+
+expressao: \d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}
+Matches: 15.123.321/8883-22
+
+//busca por padrao IP
+
+expressao: \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}
+Matches: 128.126.12.244
+
+
