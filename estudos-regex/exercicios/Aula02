@@ -1,0 +1,26 @@
+EXPRESSÕES REGULARES
+
+
+**********/AULA2/*************
+
+
+*target* - Maria Fulana, 98765432100,11 de Abril de 1995,(11) 933339871,Rua Vergueiro,3185,04101-300,São Paulo
+
+
+//busca por padrao CPF tonando o ponto (".") como opcional
+
+expressao: \d{3}\.?\d{3}\.?\d{3}-?\d{2}
+Matches: 98765432100
+
+
+//busca por padrao CPF tonando o hifen ou ponto antes do digito do cpf como opcional
+expressao: \d{3}\.?\d{3}\.?\d{3}-?\d{2}
+Matches: 98765432100
+
+
+*target* - No <code>for</code>, o valor de <code>i</code> começa de zero e é incrementado a cada volta enquanto <code>i < 10</code>, portando o bloco de código do for é executado 10 vezes.
+
+//Busca a tag <code> ou </code>
+expressao: </?code>
+Matches: <code> | </code> | <code> | </code> | <code> | </code>
+
